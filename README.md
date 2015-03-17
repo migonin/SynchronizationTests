@@ -10,7 +10,7 @@ Synchronization primitives:
 * NSLock
 * OSSpinLock
 * GCD semaphore
-* GCD serial queu
+* GCD serial queue
 * pthread mutex
 
 ## Lock-unlock test
@@ -22,5 +22,3 @@ In this test I just lock dictionary, do some work with it and unlock it for 1 00
 In this test things get real: I lock shared dictionary, do some work and unlock it from two concurrent blocks for 100 000 times each.
 
 ![alt tag](https://raw.githubusercontent.com/migonin/SynchronizationTests/master/SynchronizationTests/Diagrams/twoBlocks.png) 
-
-All results have taken with iPhone 6.
