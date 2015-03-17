@@ -14,6 +14,7 @@
 		13E829FB1AB80414004A9970 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E829FA1AB80414004A9970 /* Images.xcassets */; };
 		13E829FE1AB80414004A9970 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E829FC1AB80414004A9970 /* LaunchScreen.xib */; };
 		13E82A0A1AB80414004A9970 /* SynchronizationTestsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E82A091AB80414004A9970 /* SynchronizationTestsTests.m */; };
+		13E82A151AB8043A004A9970 /* ThreadSafeDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E82A141AB8043A004A9970 /* ThreadSafeDictionary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		13E82A031AB80414004A9970 /* SynchronizationTestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SynchronizationTestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E82A081AB80414004A9970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13E82A091AB80414004A9970 /* SynchronizationTestsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SynchronizationTestsTests.m; sourceTree = "<group>"; };
+		13E82A131AB8043A004A9970 /* ThreadSafeDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadSafeDictionary.h; sourceTree = "<group>"; };
+		13E82A141AB8043A004A9970 /* ThreadSafeDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadSafeDictionary.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 		13E829EC1AB80414004A9970 /* SynchronizationTests */ = {
 			isa = PBXGroup;
 			children = (
+				13E82A131AB8043A004A9970 /* ThreadSafeDictionary.h */,
+				13E82A141AB8043A004A9970 /* ThreadSafeDictionary.m */,
 				13E829F11AB80414004A9970 /* AppDelegate.h */,
 				13E829F21AB80414004A9970 /* AppDelegate.m */,
 				13E829F41AB80414004A9970 /* ViewController.h */,
@@ -221,6 +226,7 @@
 			files = (
 				13E829F61AB80414004A9970 /* ViewController.m in Sources */,
 				13E829F31AB80414004A9970 /* AppDelegate.m in Sources */,
+				13E82A151AB8043A004A9970 /* ThreadSafeDictionary.m in Sources */,
 				13E829F01AB80414004A9970 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +424,7 @@
 				13E82A0F1AB80414004A9970 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13E82A101AB80414004A9970 /* Build configuration list for PBXNativeTarget "SynchronizationTestsTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +433,7 @@
 				13E82A121AB80414004A9970 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

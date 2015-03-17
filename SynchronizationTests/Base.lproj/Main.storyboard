@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7525" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7516"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,133 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@synchronized: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVO-U4-tIH">
+                                <rect key="frame" x="16" y="66" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="fCg-oH-mIB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NSLock:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAx-Z7-5zH">
+                                <rect key="frame" x="16" y="95" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5S1-Cd-Rcv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OSSpinLock" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThS-xY-fSh">
+                                <rect key="frame" x="16" y="124" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1ln-ET-pcO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GCD Semaphore" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtz-NI-mD1">
+                                <rect key="frame" x="16" y="153" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Uqe-6b-TXi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GCD Queue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuW-Sc-8jY">
+                                <rect key="frame" x="16" y="182" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="DHG-rI-R1l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PTHread mutex" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyT-Yo-8uH">
+                                <rect key="frame" x="16" y="211" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Dm7-F2-b4Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iiE-ug-hVo">
+                                <rect key="frame" x="16" y="240" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="m13-RE-QUu"/>
+                                </constraints>
+                                <state key="normal" title="Lock-unlock test">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="lockUnlockTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BDM-ly-3dk"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100000" borderStyle="roundedRect" placeholder="Iterations count" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uTJ-uC-oXO">
+                                <rect key="frame" x="16" y="28" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuD-gn-LVw">
+                                <rect key="frame" x="16" y="278" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="q1u-GL-z62"/>
+                                </constraints>
+                                <state key="normal" title="Two concurent block test">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twoBlocksTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xl2-dS-deT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uTJ-uC-oXO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1Ez-ao-nb4"/>
+                            <constraint firstItem="tuW-Sc-8jY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6x9-90-WHc"/>
+                            <constraint firstItem="tuW-Sc-8jY" firstAttribute="top" secondItem="mtz-NI-mD1" secondAttribute="bottom" constant="8" id="AzU-Ac-5yx"/>
+                            <constraint firstItem="YyT-Yo-8uH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Dba-eF-fUV"/>
+                            <constraint firstItem="YyT-Yo-8uH" firstAttribute="top" secondItem="tuW-Sc-8jY" secondAttribute="bottom" constant="8" id="DwU-MJ-nww"/>
+                            <constraint firstItem="ThS-xY-fSh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Fvc-0K-xGZ"/>
+                            <constraint firstItem="HAx-Z7-5zH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="G2p-G6-bZj"/>
+                            <constraint firstItem="iiE-ug-hVo" firstAttribute="top" secondItem="YyT-Yo-8uH" secondAttribute="bottom" constant="8" id="HES-xX-ooP"/>
+                            <constraint firstItem="uTJ-uC-oXO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="M3W-f9-2z0"/>
+                            <constraint firstItem="sVO-U4-tIH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Rno-xe-hpQ"/>
+                            <constraint firstItem="ThS-xY-fSh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Rz4-Ie-k6w"/>
+                            <constraint firstItem="mtz-NI-mD1" firstAttribute="top" secondItem="ThS-xY-fSh" secondAttribute="bottom" constant="8" id="SKx-Gi-mVA"/>
+                            <constraint firstItem="sVO-U4-tIH" firstAttribute="top" secondItem="uTJ-uC-oXO" secondAttribute="bottom" constant="8" id="Slp-JP-lsG"/>
+                            <constraint firstItem="uTJ-uC-oXO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="WVH-wr-4vH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zuD-gn-LVw" secondAttribute="trailing" id="Wao-kn-9Ca"/>
+                            <constraint firstItem="zuD-gn-LVw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ymv-VQ-w64"/>
+                            <constraint firstItem="zuD-gn-LVw" firstAttribute="top" secondItem="iiE-ug-hVo" secondAttribute="bottom" constant="8" id="ZZF-LC-aMA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sVO-U4-tIH" secondAttribute="trailing" id="ZgJ-tP-D1E"/>
+                            <constraint firstItem="mtz-NI-mD1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="g5O-L1-n9x"/>
+                            <constraint firstItem="YyT-Yo-8uH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="g5p-09-7jd"/>
+                            <constraint firstItem="HAx-Z7-5zH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hJQ-lT-Crg"/>
+                            <constraint firstItem="ThS-xY-fSh" firstAttribute="top" secondItem="HAx-Z7-5zH" secondAttribute="bottom" constant="8" id="i8m-av-wir"/>
+                            <constraint firstItem="HAx-Z7-5zH" firstAttribute="top" secondItem="sVO-U4-tIH" secondAttribute="bottom" constant="8" id="iMR-vZ-21Y"/>
+                            <constraint firstItem="mtz-NI-mD1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ipm-9S-abE"/>
+                            <constraint firstItem="tuW-Sc-8jY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jey-lG-SYr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iiE-ug-hVo" secondAttribute="trailing" id="vVB-cg-VZ8"/>
+                            <constraint firstItem="iiE-ug-hVo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zsY-V6-UCG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gcdQueueLabel" destination="tuW-Sc-8jY" id="dSO-VZ-HN0"/>
+                        <outlet property="gcdSemaphoreLabel" destination="mtz-NI-mD1" id="S7N-JB-Aye"/>
+                        <outlet property="iterationsCountTextField" destination="uTJ-uC-oXO" id="JaJ-gD-zds"/>
+                        <outlet property="lockUnlockTestButton" destination="iiE-ug-hVo" id="MAR-cm-qyl"/>
+                        <outlet property="nsLockLabel" destination="HAx-Z7-5zH" id="gm2-oO-Cpb"/>
+                        <outlet property="osSpinLockLabel" destination="ThS-xY-fSh" id="6is-Sk-Lhx"/>
+                        <outlet property="pthreadMutexLabel" destination="YyT-Yo-8uH" id="YJ6-5G-e4y"/>
+                        <outlet property="synchronizedLabel" destination="sVO-U4-tIH" id="99E-kl-yYb"/>
+                        <outlet property="twoBlockTestButton" destination="zuD-gn-LVw" id="aHm-9m-wrQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
