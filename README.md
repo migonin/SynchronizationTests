@@ -1,7 +1,10 @@
 # iOS synchronization tests
 Actually there are several synchronization approaches in iOS. Let's see which is most effective.
 
-Test preconditions is simple - shared NSMutableDictionary.
+Test preconditions is simple:
+* shared NSMutableDictionary.
+* iPhone 6
+
 Synchronization primitives:
 * @synchronized
 * NSLock
@@ -19,3 +22,5 @@ In this test I just lock dictionary, do some work with it and unlock it for 1 00
 In this test things get real: I lock shared dictionary, do some work and unlock it from two concurrent blocks for 100 000 times each.
 
 ![alt tag](https://raw.githubusercontent.com/migonin/SynchronizationTests/master/SynchronizationTests/Diagrams/twoBlocks.png) 
+
+All results have taken with iPhone 6.
